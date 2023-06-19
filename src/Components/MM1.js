@@ -1,14 +1,14 @@
 import React, { useState } from "react";
-import Avatar from "@mui/material/Avatar";
+// import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
 import TextField from "@mui/material/TextField";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import Checkbox from "@mui/material/Checkbox";
-import Link from "@mui/material/Link";
+// import FormControlLabel from "@mui/material/FormControlLabel";
+// import Checkbox from "@mui/material/Checkbox";
+// import Link from "@mui/material/Link";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
-import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
+// import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
@@ -17,15 +17,15 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import CountUp from "react-countup";
-import { useCountUp } from "react-countup";
-import { Doughnut } from "react-chartjs-2";
-import Alert from "@mui/material/Alert";
+// import { useCountUp } from "react-countup";
+// import { Doughnut } from "react-chartjs-2";
+// import Alert from "@mui/material/Alert";
 // import { Bar } from "./Bar";
 
 const theme = createTheme();
 
 export default function MM1() {
-  const countUpRef = React.useRef(null);
+  // const countUpRef = React.useRef(null);
   const [l, setL] = useState(0);
   const [lq, setLq] = useState(0);
   const [w, setW] = useState(0);
@@ -36,11 +36,11 @@ export default function MM1() {
   const [serviceRate, setServiceRate] = useState("");
   const [lemda, setLemda] = useState(0);
   const [mue, setMue] = useState(0);
-  const [barChart, setBarChart] = useState([]);
+  // const [barChart, setBarChart] = useState([]);
   const [showResult, setShowResult] = useState(false)
 
-  const [error, setError] = useState(false);
-  const [errorMessage, setErrorMessage] = useState("please enter");
+  // const [error, setError] = useState(false);
+  // const [errorMessage, setErrorMessage] = useState("please enter");
 
   function generateIntervalsOf(start, end) {
     const result = [];
@@ -49,7 +49,7 @@ export default function MM1() {
       result.push(Math.random().toFixed(2));
     }
     console.log(result.sort((a, b) => a - b));
-    setBarChart(result);
+    // setBarChart(result);
     return result;
   }
 
