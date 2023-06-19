@@ -282,7 +282,13 @@ export default function MM1() {
               justifyContent: 'center',
               padding: '12px',
               borderRadius: '10px',
+              '&:hover': {
+                backgroundColor: '#fff',
+                color: '#ff0000',
+                border: '2px solid #ff0000'
+              }
             }}
+         
           >
             Calculate
           </Button>

@@ -229,7 +229,7 @@ export default function MGC() {
 
 
             <Grid md={10}>
-              
+
               <Box
                 sx={{
                   borderRadius: 2,
@@ -315,7 +315,7 @@ export default function MGC() {
             </Grid>
 
           </Grid>
-       
+
           <Button
             type="submit"
             // fullWidth
@@ -332,6 +332,11 @@ export default function MGC() {
               justifyContent: 'center',
               padding: '12px',
               borderRadius: '10px',
+              '&:hover': {
+                backgroundColor: '#fff',
+                color: '#ff0000',
+                border: '2px solid #ff0000'
+              }
             }}
           >
             Calculate
