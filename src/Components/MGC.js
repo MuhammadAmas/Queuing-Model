@@ -225,10 +225,36 @@ export default function MGC() {
         <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
           <Grid container flexDirection="row" justifyContent="space-evenly">
 
+          <Grid md={4.5}>
+              <Box
+                sx={{
+                  borderRadius: 2,
+                  boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
+                  padding: 3,
+                  mb: 5,
+                }}
+                className="container"
+              >
+                <Typography sx={{ fontSize: 20, fontWeight: "bold" }}>
+                  Number of Servers ( C )
+                </Typography>
+                <TextField
+                  margin="normal"
+                  required
+                  fullWidth
+                  id="servers"
+                  label="Number of Servers"
+                  name="servers"
+                  type="number"
+                />
+                <Typography sx={{ color: "gray", fontSize: 10 }}>
+                  Number of servers in parallel open to attend customers.
+                </Typography>
+              </Box>
+            </Grid>
 
 
-
-            <Grid md={10}>
+            <Grid md={4.5}>
 
               <Box
                 sx={{
