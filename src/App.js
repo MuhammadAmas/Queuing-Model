@@ -4,6 +4,37 @@ import "./App.css"
 
 function App() {
 
+  function calculatePo(c, rho) {
+    let res = 0
+    for (let n = 0; n < c; n++) {
+      res += Math.pow((c * rho), n) / factorial(n)
+    }
+    console.log(1 / (res + (Math.pow((c * rho), c) / (factorial(c) * (1 - rho)))))
+    return (1 / (res + (Math.pow((c * rho), c) / (factorial(c) * (1 - rho)))))
+  }
+
+  function factorial(n) {
+    if (n < 0) {
+      console.log('Error! Factorial for negative number does not exist.');
+    }
+
+    else if (n === 0) {
+      console.log(`The factorial of ${n} is 1.`);
+    }
+
+    else {
+      let fact = 1;
+      for (let i = 1; i <= n; i++) {
+        fact *= i;
+      }
+      console.log(`The factorial of ${n} is ${fact}.`);
+      return fact
+    }
+  }
+
+  const temp = calculatePo(2, 0.75)
+  console.log(temp)
+
   return (
     <div className="App">
       <Header />

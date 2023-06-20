@@ -47,8 +47,8 @@ export default function MMC() {
     setWq(0);
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    const mue = data.get("mue");
-    const lemda = data.get("lemda");
+    let mue = data.get("mue");
+    let lemda = data.get("lemda");
     const servers = data.get("servers");
 
     console.log({
@@ -56,14 +56,14 @@ export default function MMC() {
       lemda: data.get("lemda"),
       mue: data.get("mue"),
     });
+    lemda = parseFloat(1/lemda);
+    mue = parseFloat(1/mue)
+
 
     if (data.get("lemda") === "" || data.get("mue") === "") {
       alert("Please enter required values");
-    } else if (data.get("lemda") >= data.get("mue")) {
-      alert(
-        "The queues will tend to infinity as Lambda is greater or equal than 2 times Mu"
-      );
-    } else if (serviceRate === "" || arrivalRate === "") {
+    } 
+    else if (serviceRate === "" || arrivalRate === "") {
       alert("please select rates");
     } else {
 
@@ -78,28 +78,48 @@ export default function MMC() {
           return num * factorialize(num - 1);
         }
       }
+      function factorial(n) {
+        if (n < 0) {
+          console.log('Error! Factorial for negative number does not exist.');
+        }
+
+        else if (n === 0 || n === 1) {
+          console.log(`The factorial of ${n} is 1.`);
+          return 1;
+        }
+
+        else {
+          let fact = 1;
+          for (let i = 1; i <= n; i++) {
+            fact *= i;
+          }
+          console.log(`The factorial of ${n} is ${fact}.`);
+          return fact
+        }
+      }
+      function calculatePo(c, rho) {
+        let res = 0
+        for (let n = 0; n < c; n++) {
+          res += Math.pow((c * rho), n) / factorial(n)
+        }
+        console.log(1 / (res + (Math.pow((c * rho), c) / (factorial(c) * (1 - rho)))))
+        return (1 / (res + (Math.pow((c * rho), c) / (factorial(c) * (1 - rho)))))
+      }
 
       const ro = lemda / (servers * mue);
+      const po = calculatePo(servers, ro);
 
-      setP(ro);
+      setP(ro*100);
       setL(
-        ro +
-        (ro * (servers * ro) ** servers) /
-        ((1 - ro) ** 2 * factorialize(servers))
+        (lemda * (((po * (((lemda / mue) ** servers) * ro)) / (factorial(servers) * ((1 - ro) ** 2)) / lemda) + (1 / mue)))
       );
       setW(
-        ro +
-        (ro * (servers * ro) ** servers) /
-        (lemda * (1 - ro) ** 2 * factorialize(servers))
+        (((po * (((lemda / mue) ** servers) * ro)) / (factorial(servers) * ((1 - ro) ** 2)) / lemda) + (1 / mue))
       );
       setWq(
-        (ro * (servers * ro) ** servers) /
-        (lemda * (1 - ro) ** 2 * factorialize(servers))
+        ((po * (((lemda / mue) ** servers) * ro)) / (factorial(servers) * ((1 - ro) ** 2)) / lemda)
       );
-      setLq(
-        (lemda * (ro * (servers * ro) ** servers)) /
-        (lemda * (1 - ro) ** 2 * factorialize(servers))
-      );
+      setLq((po * (((lemda / mue) ** servers) * ro)) / (factorial(servers) * ((1 - ro) ** 2)));
     }
   };
 

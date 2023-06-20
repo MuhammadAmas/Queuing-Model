@@ -73,29 +73,31 @@ export default function MGC() {
 
 
       function factorial(n) {
-        // program to find the factorial of a number
-
-        // take input from the user
-
-        // checking if number is negative
         if (n < 0) {
           console.log('Error! Factorial for negative number does not exist.');
         }
 
-        // if number is 0
-        else if (n === 0) {
+        else if (n === 0 || n === 1) {
           console.log(`The factorial of ${n} is 1.`);
+          return 1;
         }
 
-        // if number is positive
         else {
           let fact = 1;
           for (let i = 1; i <= n; i++) {
             fact *= i;
           }
           console.log(`The factorial of ${n} is ${fact}.`);
-          return fact;
+          return fact
         }
+      }
+      function calculatePo(c, rho) {
+        let res = 0
+        for (let n = 0; n < c; n++) {
+          res += Math.pow((c * rho), n) / factorial(n)
+        }
+        console.log(1 / (res + (Math.pow((c * rho), c) / (factorial(c) * (1 - rho)))))
+        return (1 / (res + (Math.pow((c * rho), c) / (factorial(c) * (1 - rho)))))
       }
       // var lemda = 1 / ia;
       // var miu = 1 / ((minimum + maximum) / 2);
@@ -108,7 +110,7 @@ export default function MGC() {
       console.log("miu", miu)
       var server = servers;
       var ro = lemda / (miu * server);
-      var po = 0.1453
+      var po = calculatePo(servers, ro)  // Needs to changed
 
       var varianceOfServiceTime = ((maximum - minimum) ** 2) / 12;
       // var varianceOfServiceTime = (20 - 10) ** 2 / 12;
@@ -225,7 +227,7 @@ export default function MGC() {
         <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
           <Grid container flexDirection="row" justifyContent="space-evenly">
 
-          <Grid md={4.5}>
+            <Grid md={4.5}>
               <Box
                 sx={{
                   borderRadius: 2,
