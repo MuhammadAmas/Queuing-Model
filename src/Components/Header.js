@@ -9,11 +9,11 @@ import Button from '@mui/material/Button';
 
 export default function ButtonAppBar() {
   return (
-    <Box sx={{ flexGrow: 1}}>
-      <AppBar position="static" 
-      sx={{ 
-        backgroundColor: '#ff0000' 
-      }}>
+    <Box sx={{ flexGrow: 1 }}>
+      <AppBar position="static"
+        sx={{
+          backgroundColor: '#ff0000'
+        }}>
         <Toolbar>
 
           {/* <MenuIcon /> */}

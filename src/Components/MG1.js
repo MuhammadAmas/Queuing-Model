@@ -229,56 +229,56 @@ export default function MG1() {
 
 
             {/* <Grid md={10} container flexDirection="row" justifyContent="space-between"> */}
-              <Grid md={4.5}>
-                <Box
-                  sx={{
-                    borderRadius: 2,
-                    boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
-                    padding: 3,
-                    mb: 5,
-                  }}
-                  className="container"
-                >
-                  <Typography sx={{ fontSize: 20, fontWeight: "bold" }}>
-                    Minimum
-                  </Typography>
-                  <TextField
-                    margin="normal"
-                    required
-                    fullWidth
-                    id="minimum"
-                    label="Enter minimum value"
-                    name="minimum"
-                    type="number"
-                  />
-                </Box>
-              </Grid>
+            <Grid md={4.5}>
+              <Box
+                sx={{
+                  borderRadius: 2,
+                  boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
+                  padding: 3,
+                  mb: 5,
+                }}
+                className="container"
+              >
+                <Typography sx={{ fontSize: 20, fontWeight: "bold" }}>
+                  Minimum
+                </Typography>
+                <TextField
+                  margin="normal"
+                  required
+                  fullWidth
+                  id="minimum"
+                  label="Enter minimum value"
+                  name="minimum"
+                  type="number"
+                />
+              </Box>
+            </Grid>
 
-              <Grid md={4.5}>
-                <Box
-                  sx={{
-                    borderRadius: 2,
-                    boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
-                    padding: 3,
-                    mb: 5,
-                  }}
-                  className="container"
-                >
-                  <Typography sx={{ fontSize: 20, fontWeight: "bold" }}>
-                    Maximum
-                  </Typography>
-                  <TextField
-                    margin="normal"
-                    required
-                    fullWidth
-                    id="maximum"
-                    label="Enter maximum value"
-                    name="maximum"
-                    type="number"
-                  />
+            <Grid md={4.5}>
+              <Box
+                sx={{
+                  borderRadius: 2,
+                  boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
+                  padding: 3,
+                  mb: 5,
+                }}
+                className="container"
+              >
+                <Typography sx={{ fontSize: 20, fontWeight: "bold" }}>
+                  Maximum
+                </Typography>
+                <TextField
+                  margin="normal"
+                  required
+                  fullWidth
+                  id="maximum"
+                  label="Enter maximum value"
+                  name="maximum"
+                  type="number"
+                />
 
-                </Box>
-              </Grid>
+              </Box>
+            </Grid>
 
             {/* </Grid> */}
 

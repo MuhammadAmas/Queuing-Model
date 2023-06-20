@@ -69,3 +69,43 @@ html::-moz-scrollbar-thumb:hover {
 html::-moz-scrollbar-thumb:active {
     background: linear-gradient(to bottom, #ff0000, #ff8888);
 }
+
+
+
+.footer {
+    background-color: #1b1b1b;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* .footer-text {
+    flex-grow: 1;
+  } */
+
+.footer-text span {
+    font-size: 14px;
+}
+
+.footer-icon {
+    margin-left: 10px;
+}
+
+.footer-icon a {
+    color: white;
+}
+
+.footer-icon a:hover {
+    color: #ff0000;
+    transition: 0.3s;
+}
+
+.orange_gradient {
+    @apply bg-gradient-to-r from-amber-500 via-orange-600 to-yellow-500 bg-clip-text text-transparent !important;
+}

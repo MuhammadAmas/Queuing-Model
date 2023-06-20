@@ -56,13 +56,13 @@ export default function MMC() {
       lemda: data.get("lemda"),
       mue: data.get("mue"),
     });
-    lemda = parseFloat(1/lemda);
-    mue = parseFloat(1/mue)
+    lemda = parseFloat(1 / lemda);
+    mue = parseFloat(1 / mue)
 
 
     if (data.get("lemda") === "" || data.get("mue") === "") {
       alert("Please enter required values");
-    } 
+    }
     else if (serviceRate === "" || arrivalRate === "") {
       alert("please select rates");
     } else {
@@ -109,7 +109,7 @@ export default function MMC() {
       const ro = lemda / (servers * mue);
       const po = calculatePo(servers, ro);
 
-      setP(ro*100);
+      setP(ro * 100);
       setL(
         (lemda * (((po * (((lemda / mue) ** servers) * ro)) / (factorial(servers) * ((1 - ro) ** 2)) / lemda) + (1 / mue)))
       );

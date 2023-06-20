@@ -288,7 +288,7 @@ export default function MM1() {
                 border: '2px solid #ff0000'
               }
             }}
-         
+
           >
             Calculate
           </Button>
