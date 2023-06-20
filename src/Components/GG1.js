@@ -333,7 +333,7 @@ export default function GG1() {
                     </Button>
                 </Box>
 
-                {true ? (
+                {showResult ? (
                     <>
                         <Typography
                             sx={{
