@@ -8,6 +8,9 @@ import MM1 from './MM1';
 import MG1 from './MG1';
 import MMC from './MMC';
 import MGC from './MGC';
+import GG1 from './GG1';
+import GGC from './GGC';
+
 
 export default function LabTabs() {
   const [value, setValue] = React.useState('1');
@@ -51,12 +54,16 @@ export default function LabTabs() {
             <Tab label={<span style={{ color: value === '2' ? '#ff0000' : '#fff' }}>M/M/C</span>} value="2" />
             <Tab label={<span style={{ color: value === '3' ? '#ff0000' : '#fff' }}>M/G/1</span>} value="3" />
             <Tab label={<span style={{ color: value === '4' ? '#ff0000' : '#fff' }}>M/G/C</span>} value="4" />
+            <Tab label={<span style={{ color: value === '5' ? '#ff0000' : '#fff' }}>G/G/1</span>} value="5" />
+            <Tab label={<span style={{ color: value === '6' ? '#ff0000' : '#fff' }}>G/G/C</span>} value="6" />
           </TabList>
         </Box>
         <TabPanel value="1"><MM1 /></TabPanel>
         <TabPanel value="2"><MMC /></TabPanel>
         <TabPanel value="3"><MG1 /></TabPanel>
         <TabPanel value="4"><MGC /></TabPanel>
+        <TabPanel value="5"><GG1 /></TabPanel>
+        <TabPanel value="6"><GGC /></TabPanel>
         {/* <TabPanel value="4"><MGC/></TabPanel> */}
       </TabContext>
     </Box>
