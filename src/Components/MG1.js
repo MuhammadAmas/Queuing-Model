@@ -1,14 +1,9 @@
 import React, { useState } from "react";
-// import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
 import TextField from "@mui/material/TextField";
-// import FormControlLabel from "@mui/material/FormControlLabel";
-// import Checkbox from "@mui/material/Checkbox";
-// import Link from "@mui/material/Link";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
-// import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
@@ -64,11 +59,7 @@ export default function MG1() {
     if (data.get("lemda") === "" || data.get("mue") === "") {
       alert("Please enter required values");
     }
-    // else if (data.get("lemda") >= data.get("mue")) {
-    //   alert(
-    //     "The queues will tend to infinity as Lambda is greater or equal than 2 times Mu"
-    //   );
-    // } 
+    
     else if (arrivalRate === "") {
       alert("please select rates");
     } else {
@@ -227,8 +218,6 @@ export default function MG1() {
             </Grid>
 
 
-
-            {/* <Grid md={10} container flexDirection="row" justifyContent="space-between"> */}
             <Grid md={4.5}>
               <Box
                 sx={{
@@ -279,9 +268,6 @@ export default function MG1() {
 
               </Box>
             </Grid>
-
-            {/* </Grid> */}
-
 
 
           </Grid>

@@ -19,9 +19,10 @@ export default function ButtonAppBar() {
           {/* <MenuIcon /> */}
           {/* </IconButton> */}
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Queuing Model
+          Operation Research
           </Typography>
-          <Button color="inherit">Operation Research</Button>
+          <Button color="inherit">Simulation</Button>
+          <Button color="inherit">Queuing Model</Button>
         </Toolbar>
       </AppBar>
     </Box>

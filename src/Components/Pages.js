@@ -41,15 +41,11 @@ export default function LabTabs() {
             aria-label="lab API tabs example"
             TabIndicatorProps={{
               style: {
-                backgroundColor: (value === '1' | value === '2' | value === '3') ? '#ff0000' : 'transparent',
-                textColor: (value === '1' | value === '2' | value === '3') ? '#ff0000' : 'transparent'
+                backgroundColor: (value === '1' | value === '2' | value === '3' | value === '4' | value === '5' | value === '6') ? '#ff0000' : 'transparent',
+                textColor: (value === '1' | value === '2' | value === '3' | value === '4' | value === '5' | value === '6') ? '#ff0000' : 'transparent'
               },
             }}
           >
-            {/* <Tab label="M/M/1" value="1" sx={{ color: '#fff' }} />
-            <Tab label="M/M/C" value="2" sx={{ color: '#fff' }} />
-            <Tab label="M/G/1" value="3" sx={{ color: '#fff' }} /> */}
-            {/* <Tab label="M/G/2" value="4" /> */}
             <Tab label={<span style={{ color: value === '1' ? '#ff0000' : '#fff' }}>M/M/1</span>} value="1" />
             <Tab label={<span style={{ color: value === '2' ? '#ff0000' : '#fff' }}>M/M/C</span>} value="2" />
             <Tab label={<span style={{ color: value === '3' ? '#ff0000' : '#fff' }}>M/G/1</span>} value="3" />
