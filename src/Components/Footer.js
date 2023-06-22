@@ -5,11 +5,8 @@ import '../App.css'
 
 function Footer() {
     return (
-        <footer className='footer' style={{
-            // border: '1px solid #ff0000',
-
-        }}>
-            <div className='footer-content'>
+        <footer className='footer'>
+            <div className='footer-content' >
                 <div className='footer-text'>
                     Agner Krarup Erlang
                 </div>

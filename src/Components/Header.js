@@ -21,8 +21,8 @@ export default function ButtonAppBar() {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
           Operation Research
           </Typography>
-          <Button color="inherit">Simulation</Button>
-          <Button color="inherit">Queuing Model</Button>
+          {/* <Button color="inherit">Simulation</Button>
+          <Button color="inherit">Queuing Model</Button> */}
         </Toolbar>
       </AppBar>
     </Box>

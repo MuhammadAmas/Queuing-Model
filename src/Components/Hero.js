@@ -12,7 +12,8 @@ const Hero = () => {
                 textAlign: 'center',
                 textDecoration: "underline #ff0000 8px",
                 textDecorationSkipInk: "none",
-                textUnderlineOffset: '-4px'
+                textUnderlineOffset: '-4px',
+                marginBottom: '2rem',
             }}>
                 Queuing Model
             </h1>

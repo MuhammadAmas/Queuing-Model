@@ -4,13 +4,11 @@ import Tab from '@mui/material/Tab';
 import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
-import MM1 from './MM1';
-import MG1 from './MG1';
-import MMC from './MMC';
+import MM1 from './Simulation/MM1';
 
 
 
-export default function LabTabs() {
+export default function SimulationPages() {
     const [value, setValue] = React.useState('1');
 
     const handleChange = (event, newValue) => {
@@ -45,13 +43,13 @@ export default function LabTabs() {
                         }}
                     >
                         <Tab label={<span style={{ color: value === '1' ? '#ff0000' : '#fff' }}>M/M/1</span>} value="1" />
-                        <Tab label={<span style={{ color: value === '2' ? '#ff0000' : '#fff' }}>M/M/C</span>} value="2" />
-                        <Tab label={<span style={{ color: value === '3' ? '#ff0000' : '#fff' }}>M/G/1</span>} value="3" />
+                        {/* <Tab label={<span style={{ color: value === '2' ? '#ff0000' : '#fff' }}>M/M/C</span>} value="2" /> */}
+                        {/* <Tab label={<span style={{ color: value === '3' ? '#ff0000' : '#fff' }}>M/G/1</span>} value="3" /> */}
                     </TabList>
                 </Box>
                 <TabPanel value="1"><MM1 /></TabPanel>
-                <TabPanel value="2"><MMC /></TabPanel>
-                <TabPanel value="3"><MG1 /></TabPanel>
+                {/* <TabPanel value="2"><MMC /></TabPanel> */}
+                {/* <TabPanel value="3"><MG1 /></TabPanel> */}
             </TabContext>
         </Box>
     );

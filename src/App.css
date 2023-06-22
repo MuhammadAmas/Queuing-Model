@@ -1,26 +1,25 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
 .App {
-    height: 100%;
+    min-height: 100vh;
     color: #fff;
     background: #1b1b1b;
     font-family: 'Satoshi', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.content {
+    flex-grow: 1;
 }
 
 .container {
-    /* background: rgba(255, 255, 255, 0.2);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    color: #fff !important; */
     background: #fff;
     color: #ff0000;
-    /* box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset; */
     box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
 }
 
@@ -90,10 +89,6 @@ html::-moz-scrollbar-thumb:active {
     align-items: center;
 }
 
-/* .footer-text {
-    flex-grow: 1;
-  } */
-
 .footer-text span {
     font-size: 14px;
 }
@@ -113,4 +108,10 @@ html::-moz-scrollbar-thumb:active {
 
 .orange_gradient {
     @apply bg-gradient-to-r from-amber-500 via-orange-600 to-yellow-500 bg-clip-text text-transparent !important;
+}
+
+
+.btn {
+    color: red;
+    background-color: #ff4444;
 }

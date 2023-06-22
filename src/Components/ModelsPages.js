@@ -4,15 +4,15 @@ import Tab from '@mui/material/Tab';
 import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
-import MM1 from './MM1';
-import MG1 from './MG1';
-import MMC from './MMC';
-import MGC from './MGC';
-import GG1 from './GG1';
-import GGC from './GGC';
+import MM1 from './Models/MM1';
+import MG1 from './Models/MG1';
+import MMC from './Models/MMC';
+import MGC from './Models/MGC';
+import GG1 from './Models/GG1';
+import GGC from './Models/GGC';
 
 
-export default function LabTabs() {
+export default function ModelsPages() {
   const [value, setValue] = React.useState('1');
 
   const handleChange = (event, newValue) => {
