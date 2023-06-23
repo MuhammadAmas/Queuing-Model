@@ -5,6 +5,8 @@ import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
 import MM1 from './Simulation/MM1';
+import MM2 from './Simulation/MM2';
+
 
 
 
@@ -43,12 +45,12 @@ export default function SimulationPages() {
                         }}
                     >
                         <Tab label={<span style={{ color: value === '1' ? '#ff0000' : '#fff' }}>M/M/1</span>} value="1" />
-                        {/* <Tab label={<span style={{ color: value === '2' ? '#ff0000' : '#fff' }}>M/M/C</span>} value="2" /> */}
+                        <Tab label={<span style={{ color: value === '2' ? '#ff0000' : '#fff' }}>M/M/2</span>} value="2" />
                         {/* <Tab label={<span style={{ color: value === '3' ? '#ff0000' : '#fff' }}>M/G/1</span>} value="3" /> */}
                     </TabList>
                 </Box>
                 <TabPanel value="1"><MM1 /></TabPanel>
-                {/* <TabPanel value="2"><MMC /></TabPanel> */}
+                <TabPanel value="2"><MM2 /></TabPanel>
                 {/* <TabPanel value="3"><MG1 /></TabPanel> */}
             </TabContext>
         </Box>
