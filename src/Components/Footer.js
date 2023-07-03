@@ -8,7 +8,7 @@ function Footer() {
         <footer className='footer'>
             <div className='footer-content' >
                 <div className='footer-text'>
-                    Agner Krarup Erlang
+                    Muhammad Amas
                 </div>
                 <div className='footer-text'>
                     <span>&copy; 2023 | All rights reserved.</span>
